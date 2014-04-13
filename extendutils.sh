@@ -77,8 +77,6 @@ function main {
 			fi
 			line
 			exit 0
-		else
-			main
 		fi
 		main
 	fi
