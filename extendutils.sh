@@ -64,11 +64,10 @@ function main {
 		read -n 1 CU
 		if [ "x$CU" = "xr" ]; then	
 			uninstall
-			rm -d /Applications/Extended\ Utilities/
 			if [ -d /Applications/Extended\ Utilities ]; then
 				title
 				echo "The following files were in the extended utilities directory, and were not deleted:"
-				ls /Applications/Extended\ Utilities/
+				ls -a /Applications/Extended\ Utilities/
 				line
 				echo "Uninstalled. Press any key."
 				read -n 1 null
@@ -112,6 +111,8 @@ function uninstall {
 	rm -rf /Applications/Extended\ Utilities/System\ Image\ Utility.app
 	rm -rf /Applications/Extended\ Utilities/Ticket\ Viewer.app
 	rm -rf /Applications/Extended\ Utilities/Wireless\ Diagnostics.app
+	rm -f Applications/Extended\ Utilities/.DS_Store
+	rm -d /Applications/Extended\ Utilities ## only if empty
 }
 function install {
 	mkdir /Applications/Extended\ Utilities | /dev/null
