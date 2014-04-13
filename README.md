@@ -1,7 +1,7 @@
 MacExtendedUtilities
 ====================
 
-Adds useful utilities to the applications folder that are normally tucked away in the CoreServices system folder.
+Adds useful utilities to the applications folder that are normally tucked away in the CoreServices system folder with a simple, fast UI. 
 
 Adds the following:
 - Add Printer Utility
