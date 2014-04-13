@@ -42,7 +42,6 @@ function describe {
 function main {
 	clear
 	YN=""
-	
 	while [ "x$YN" != "xq" -a "x$YN" != "xQ" -a "x$YN" != "xc" -a "x$YN" != "xC" -a "x$YN" != "xr" -a "x$YN" != "xR" -a "x$YN" != "xl" -a "x$YN" != "xL" -a "x$YN" != "xe" -a "x$YN" != "xE" ]; do
 		title
 		describe
@@ -58,13 +57,15 @@ function main {
 	if [ "x$YN" = "xr" -o "x$YN" = "xR" ]; then
 		clear 
 		title
-		echo "Press r again to confirm removing. Any other key to return to menu."
+		echo "Press r again to confirm removing. Any other key to return to menu. No other"
+		echo "files will be removed."
+		line
 		echo ""
 		read -n 1 CU
 		if [ "x$CU" = "xr" ]; then	
 			uninstall
 			rm -d /Applications/Extended\ Utilities/
-			if [ "x$?" != "x0" ]; then
+			if [ -d /Applications/Extended\ Utilities ]; then
 				title
 				echo "The following files were in the extended utilities directory, and were not deleted:"
 				ls /Applications/Extended\ Utilities/
