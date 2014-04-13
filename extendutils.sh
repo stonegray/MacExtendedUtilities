@@ -42,7 +42,7 @@ function describe {
 function main {
 	clear
 	YN=""
-	while [ "x$YN" != "xq" -a "x$YN" != "xQ" -a "x$YN" != "xc" -a "x$YN" != "xC" -a "x$YN" != "xr" -a "x$YN" != "xR" -a "x$YN" != "xl" -a "x$YN" != "xL" -a "x$YN" != "xe" -a "x$YN" != "xE" ]; do
+	while [ "x$YN" != "xq" -a "x$YN" != "xQ" -a "x$YN" != "xr" -a "x$YN" != "xR" -a "x$YN" != "xl" -a "x$YN" != "xL" -a "x$YN" != "xe" -a "x$YN" != "xE" ]; do
 		title
 		describe
 		echo -n "Enter selection: "
@@ -94,12 +94,6 @@ function main {
 		echo "Exited."
 		line
 		exit 0
-	fi
-	if [ "x$YN" = "xc" -o "x$YN" = "xC" ]; then
-		title
-		echo "This feature is not implemented. Press any key to return to menu."
-		read -n 1 ignore
-		main
 	fi
 }
 function uninstall {
