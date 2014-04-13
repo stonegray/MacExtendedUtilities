@@ -109,7 +109,7 @@ function uninstall {
 	rm -rf /Applications/Extended\ Utilities/System\ Image\ Utility.app
 	rm -rf /Applications/Extended\ Utilities/Ticket\ Viewer.app
 	rm -rf /Applications/Extended\ Utilities/Wireless\ Diagnostics.app
-	rm -f Applications/Extended\ Utilities/.DS_Store
+	rm -f Applications/Extended\ Utilities/.DS_Store ## fixes 'if empty'
 	rm -d /Applications/Extended\ Utilities ## only if empty
 }
 function install {
