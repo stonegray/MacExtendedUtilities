@@ -109,6 +109,7 @@ function uninstall {
 	rm -rf /Applications/Extended\ Utilities/System\ Image\ Utility.app
 	rm -rf /Applications/Extended\ Utilities/Ticket\ Viewer.app
 	rm -rf /Applications/Extended\ Utilities/Wireless\ Diagnostics.app
+	rm -rf /Applications/Extended\ Utilities/AVB\ Audio\ Configuration.app
 	rm -f Applications/Extended\ Utilities/.DS_Store ## fixes 'if empty'
 	rm -d /Applications/Extended\ Utilities ## only if empty
 }
@@ -127,6 +128,7 @@ function install {
 	ln -sf /System/Library/CoreServices/Certificate\ Assistant.app /Applications/Extended\ Utilities/ |
 	ln -sf /System/Library/CoreServices/Bluetooth\ Setup\ Assistant.app /Applications/Extended\ Utilities/ |
 	ln -sf /System/Library/CoreServices/Directory\ Utility.app /Applications/Extended\ Utilities/ |
+	ln -sf /System/Library/CoreServices/AVB\ Audio\ Configuration.app /Applications/Extended\ Utilities/ |
 	clear
 	title
 	open /Applications/Extended\ Utilities/
